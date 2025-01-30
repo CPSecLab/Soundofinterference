@@ -392,6 +392,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embed Audio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Video Embed</title>
+
     <!-- <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@ArashVahdat">
     <meta name="twitter:title" content="Diffusion Models for Adversarial Purification">
@@ -458,9 +462,9 @@
 
 <br> <br>
 <p> We verify the vulnerability presence by conducting real-world evaluation on several PDM microphones and electronic devices, including laptops and smart speakers. For example, we demonstrate that the attack achieves up to 94.2\% accuracy in recognizing spoken digits, up to 2 meters from a victim laptop located behind a 25 cm concrete wall. We also evaluate the attacker capability to eavesdrop on speech using popular speech-to-text APIs (e.g., OpenAI) not trained on EM traces, achieving a maximum of 14% transcription error rate in recovering the Harvard Sentences dataset. We further demonstrate that similar accuracy can be achieved with a cheap and stealthy antenna made out of copper tape. We finally discuss the limited effectiveness of current defenses such as resampling, and we propose a new hardware defense based on clock randomization. </p>
-<br>
+
 </div>
-<br>To appear in <a href="https://www.usenix.org/conference/usenixsecurity25">USENIX 2025</a>
+<br>To appear in <a href="https://www.usenix.org/conference/usenixsecurity25">USENIX 2025</a>. The artifacts of this work, data collected through the SoI attack, and scripts to fine-tune and evaluate speech recognition and transcription models are available at <a href="https://zenodo.org/records/14736347">Zenodo</a>. 
 
 
 
@@ -492,9 +496,22 @@
 <section id="novelties"/>
     <h2>Attack Demonstration</h2>
     <hr>
+    <div class="col-2 text-center"> <figure style="width: 100%">
+        <br>
+    <iframe src="https://drive.google.com/file/d/1ZIJ2xxa8j1NE1CYjHz3NU20yzAxWbXH4/preview" width="95%" height="35%" allowfullscreen></iframe>
+    <figcaption>Demonstration of the attack in a real-world scenario, where a cheap antenna made with copper foil is placed across the wall from the target device.
+    </figcaption>
+</figure>
+</div>
 
-	
-	<div class="col-2 text-center"> <figure style="width: 100%">
+<div class="col-2 text-center"> <figure style="width: 100%">
+    <br>
+    <iframe src="https://drive.google.com/file/d/1xVZXRtjviPTR5jcohHPwF96jX5Qe25t_/preview" width="95%" height="35%" allowfullscreen></iframe>
+    <figcaption>Demonstration of the attack in a real-world scenario, where a cheap antenna made with copper foil is placed across the wall from the target device.
+    </figcaption>
+</figure>
+</div>
+	<!-- <div class="col-2 text-center"> <figure style="width: 100%">
         <center>           
             <video width="70%" 
                height="40%" 
@@ -531,17 +548,17 @@
 </center>
        
     </figure>
-        <!-- <br>
+        <br>
 		<br>
 	 -->
 
-</div>
+<!-- </div>
 <div class="overlayText">
-                <center>
+                <center> -->
                
 
 	
-    </section>
+    </section> 
 
     <section id="outdoor"/>
 	
