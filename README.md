@@ -1,2 +1,2 @@
-# aquasonic
-Website for the AquaSonic paper.
+# Sound Of Interference
+Website for the Sound of Interference paper.
