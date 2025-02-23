@@ -99,6 +99,7 @@
             <div class="image-container">
                 <img class="scale_img" src="img/fig1_new.png" style="max-width: 100%; height: auto; display: block; margin: auto;">
             </div>
+            <br>
     
             <p> We verify the vulnerability presence by conducting real-world evaluation on several PDM microphones and electronic devices, including laptops and smart speakers. For example, we demonstrate that the attack achieves up to 94.2% accuracy in recognizing spoken digits, up to 2 meters from a victim laptop located behind a 25 cm concrete wall. We also evaluate the attacker capability to eavesdrop on speech using popular speech-to-text APIs (e.g., OpenAI) not trained on EM traces, achieving a maximum of 14% transcription error rate in recovering the Harvard Sentences dataset. We further demonstrate that similar accuracy can be achieved with a cheap and stealthy antenna made out of copper tape. We finally discuss the limited effectiveness of current defenses such as resampling, and we propose a new hardware defense based on clock randomization.
             </p>
@@ -108,12 +109,12 @@
         To appear in <a href="https://www.usenix.org/conference/usenixsecurity25">USENIX 2025</a>. The artifacts of this work, data collected through the SoI attack, and scripts to fine-tune and evaluate speech recognition and transcription models are available at <a href="https://zenodo.org/records/14736347">Zenodo</a>.
         <br><br>
     
-        <div class="text-center">
+        <!-- <div class="text-center">
             <a href="https://arxiv.org/pdf/2404.11815.pdf" class="myButton">Read the preprint</a>
-        </div>
+        </div> -->
     
-        <br>
-        For any questions reach out to <a href="mailto:soundofinterference@gmail.com"> SoundOfInterference </a>
+        <!-- <br>
+        For any questions reach out to <a href="mailto:soundofinterference@gmail.com"> SoundOfInterference </a> -->
     </div>
     
 
@@ -188,7 +189,7 @@
                 We repeat the same experiments by playing the Harvard Sentences dataset and evaluate the intelligibility of the reconstructed signal using three state-of-the-art transcription models: (i) the HuBERT transcription model (CTCSpeech), (ii) the Microsoft speech-to-text tool (STTMicrosoft), and (iii) the OpenAI speech-to-text tool (STTOpenAI). We achieve word error rates of 4.6%, 3.1%, and 2.6%, respectively.
             </p>
     
-            <img class="experiment-img" src="img/thinkpad_probe-1-1.png" alt="ThinkPad Experiment">
+            <img class="section-img" src="img/thinkpad_probe-1-1.png" alt="ThinkPad Experiment" height="50%" weight="50%">
         </div>
     
         <br><br>
@@ -207,7 +208,7 @@
         </audio>
         <figcaption><b>Original audio sample from the Harvard Sentences dataset</b></figcaption>
     </div>
-
+    <br>
     <div class="audio-item">
         <br>
         <audio controls>
@@ -230,7 +231,7 @@
             We study the attacker’s capability to remotely discern the leaked signal from the noise by measuring the signal-to-noise ratio under different conditions, i.e., (i) volume, (ii) antennas, (iii) orientations, and (iv) distance.
         </p>
         <p>
-            <b>Impact of antenna distance and orientation:</b> We place our laptop in an office space and measure the SNR using a probe antenna (A<sub>Probe</sub>), a loop antenna (A<sub>Loop</sub>) in three orientations (vertical, horizontal, and perpendicular), and a Yagi antenna (A<sub>Yagi</sub>) in two orientations (horizontal, vertical). We achieve **25 dB PSNR at the device's proximity** and **11.59 dB PSNR at 25 cm**. The **Yagi antenna** performs better beyond **25 cm**.
+            <b>Impact of antenna distance and orientation:</b> We place our laptop in an office space and measure the SNR using a probe antenna (A<sub>Probe</sub>), a loop antenna (A<sub>Loop</sub>) in three orientations (vertical, horizontal, and perpendicular), and a Yagi antenna (A<sub>Yagi</sub>) in two orientations (horizontal, vertical). We achieve 25 dB PSNR at the device's proximity and 11.59 dB PSNR at 25 cm. The Yagi antenna performs better beyond 25 cm.
         </p>
     </div>
 
@@ -249,7 +250,7 @@
     <!-- Volume Impact -->
     <div class="content-block">
         <p>
-            <b>Impact of volume:</b> We reduce the sound volume from **64 to 58 dB** (from an office to a lab environment). We observe a **threshold behavior** where the **audio quality factor degrades** with decreasing volume. Beyond **10 cm**, where **PSNR drops below 0 dB**, the **degradation of sound quality becomes significant**.
+            <b>Impact of volume:</b> We reduce the sound volume from 64 to 58 dB (from an office to a lab environment). We observe a threshold behavior where the audio quality factor degrades with decreasing volume. Beyond 10 cm, where PSNR drops below 0 dB, the degradation of sound quality becomes significant.
         </p>
     </div>
 
@@ -269,7 +270,7 @@
     <!-- Behind-the-Wall Scenario -->
     <div class="content-block">
         <p><b>Behind-the-wall scenario:</b> We assess the accuracy of executing the attack in two adjacent rooms separated by a plaster wall (≈15 cm thick). The victim’s laptop is placed on one side, and the attacker places the A<sub>Loop</sub> antenna on the other side. We evaluate distances of 15, 20, and 25 cm.</p>
-        <p>The speaker classification accuracy reaches **99% at 20 cm** and drops to **97.3% at 25 cm**, confirming the **high intelligibility of the recorded leakage**. We achieve a **word error rate of 6.5%**.</p>
+        <p>The speaker classification accuracy reaches 99% at 20 cm and drops to 97.3% at 25 cm, confirming the high intelligibility of the recorded leakage. We achieve a word error rate of 6.5%.</p>
     </div>
 
     <div class="image-group">
@@ -309,7 +310,7 @@
 
     <!-- Long Distance Evaluation -->
     <div class="content-block">
-        <p><b>Long Distance Evaluation:</b> We analyze intelligibility over a **1-meter distance** using a **horizontal A<sub>Yagi</sub> at 461.887 MHz**. The **classification accuracy reaches 96.0% at 1 meter** and **drops to 91.6% at 2 meters**. Beyond **4 meters, recovery accuracy declines significantly.**</p>
+        <p><b>Long Distance Evaluation:</b> We analyze intelligibility over a 1-meter distance using a horizontal A<sub>Yagi</sub> at 461.887 MHz. The classification accuracy reaches 96.0% at 1 meter and drops to 91.6% at 2 meters. Beyond 4 meters, recovery accuracy declines significantly.</p>
     </div>
 
     <div class="image-group">
@@ -336,7 +337,7 @@
             PDM microphones, including (i) another laptop model from the same vendor (Lenovo ThinkPad L580), (ii) laptops from other vendors (ASUS Chromebook C204MA and Redacted Laptop), (iii) a smart speaker (Google Home), and (iv) a headset (Jabra Evolve2 40 SE). 
         </p>
         <p>
-            The classification and transcription results are consistent among the tested laptops (ThinkPad T480, L580, and Chromebook C204MA), achieving **>98.0% speech and digit classification rates** and **≤19.0% WER**. The Redacted Laptop and the smart speaker exhibit **≥86.0% speaker classification** and **≥90.3% digit classification** but higher WER. The Jabra headset achieves **10% digit classification, 13.8% speaker classification, and 100% WER**, highlighting its weaker vulnerability. Despite these variations, **the headset's signal was still reconstructable** with an STOI of 0.5490 using the **A<sub>Probe</sub> antenna**, confirming its susceptibility.
+            The classification and transcription results are consistent among the tested laptops (ThinkPad T480, L580, and Chromebook C204MA), achieving >98.0% speech and digit classification rates and ≤19.0% WER. The Redacted Laptop and the smart speaker exhibit ≥86.0% speaker classification and ≥90.3% digit classification but higher WER. The Jabra headset achieves 10% digit classification, 13.8% speaker classification, and 100% WER, highlighting its weaker vulnerability. Despite these variations, the headset's signal was still reconstructable with an STOI of 0.5490 using the A<sub>Probe</sub> antenna, confirming its susceptibility.
         </p>
     </div>
 
@@ -403,13 +404,13 @@
     <hr>
 
     <div class="content-block">
-        <p><b>Sampling Rate Randomization:</b> As discussed in the paper, shielding cannot fully mitigate all PDM leakage frequencies, making such defense insufficient. Other proposed defenses, such as **signal encryption or EM signal blinding**, come at the cost of **power consumption, performance overhead, and sophisticated hardware designs**. Previous eavesdropping attacks have shown that **sampling rate affects the reconstructed signal quality and attack performance**. 
+        <p><b>Sampling Rate Randomization:</b> As discussed in the paper, shielding cannot fully mitigate all PDM leakage frequencies, making such defense insufficient. Other proposed defenses, such as signal encryption or EM signal blinding, come at the cost of power consumption, performance overhead, and sophisticated hardware designs. Previous eavesdropping attacks have shown that sampling rate affects the reconstructed signal quality and attack performance. 
 
-        Thus, a potential mitigation is to **randomize or decimate the audio signal's sampling rate**. We evaluate transcription and speech recognition performance at **8, 16, 32, 40, and 48 kHz**. Our findings show that **digit classification accuracy remains 96% at 8 kHz and 97% at 16 kHz, exceeding 99% for higher sampling rates**. Similarly, **WER decreases by a maximum of 0.07% across all tested rates**.</p>
+        Thus, a potential mitigation is to randomize or decimate the audio signal's sampling rate. We evaluate transcription and speech recognition performance at 8, 16, 32, 40, and 48 kHz. Our findings show that digit classification accuracy remains 96% at 8 kHz and 97% at 16 kHz, exceeding 99% for higher sampling rates. Similarly, WER decreases by a maximum of 0.07% across all tested rates.</p>
 
-        <p><b>Clock Randomization:</b> Spread-Spectrum Clocking (SSC) is a **viable hardware defense** against SoI. SSC **randomly jitters clock signals**, making **narrow-band EM side-channels difficult to exploit**. Designers can implement SSC by replacing **standard oscillators with commercial SSC clock generators**.
+        <p><b>Clock Randomization:</b> Spread-Spectrum Clocking (SSC) is a viable hardware defense against SoI. SSC randomly jitters clock signals, making narrow-band EM side-channels difficult to exploit. Designers can implement SSC by replacing standard oscillators with commercial SSC clock generators.
 
-        We examine clock frequency deviations of **0.0%, 0.1%, 0.3%, and 1.0%**, which are **lower than commercial SSC generators (e.g., ADI’s DS1087L at 2-4%)**. The **EM side-channel's sound quality significantly deteriorates** as deviation increases, reducing **STOI from 0.7254 to 0.0490 at 1.0% deviation**. Meanwhile, the **original microphone's performance remains stable (≈0.98 STOI), confirming SSC's effectiveness in mitigating the attack**.</p>
+        We examine clock frequency deviations of 0.0%, 0.1%, 0.3%, and 1.0%, which are lower than commercial SSC generators (e.g., ADI’s DS1087L at 2-4%). The EM side-channel's sound quality significantly deteriorates as deviation increases, reducing STOI from 0.7254 to 0.0490 at 1.0% deviation. Meanwhile, the original microphone's performance remains stable (≈0.98 STOI), confirming SSC's effectiveness in mitigating the attack.</p>
     </div>
 </section>
 
@@ -418,9 +419,9 @@
     <hr>
 
     <div class="content-block">
-        <p>This research was funded by the **JSPS KAKENHI Grant Number 22H00519, JST CREST JPMJCR23M4, and a gift from Meta**. 
+        <p>This research was funded by the JSPS KAKENHI Grant Number 22H00519, JST CREST JPMJCR23M4, and a gift from Meta. 
 
-        We thank the **anonymous reviewers** for their insightful feedback, **Kohei Doi** for the initial exploration that stimulated this work, and **Daniel Olszewski & Tyler Tucker** for proofreading support.</p>
+        We thank the anonymous reviewers for their insightful feedback, Kohei Doi for the initial exploration that stimulated this work, and Daniel Olszewski & Tyler Tucker for proofreading support.</p>
     </div>
 </section>
 
