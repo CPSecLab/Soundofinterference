@@ -325,15 +325,17 @@
 				text-decoration:none;
 			}
     .audio-container {
-            display: flex;
-            justify-content: space-around; /* Ensures even spacing */
-            align-items: center; /* Aligns audio players properly */
-            gap: 40px; /* Adds space between the items */
-            padding: 5px;
-        }
+        display: flex;
+        flex-direction: column;  /* Changed from space-around to column */
+        align-items: center;
+        gap: 20px;  /* Reduced gap between audio players */
+        padding: 5px;
+    }
     .audio-item {
-            text-align: center; /* Centers the caption below the player */
-        }
+        width: 100%;
+        max-width: 500px;  /* Added max-width for better layout */
+        text-align: center;
+    }
 
 	.myButton {
 				 background-color:#6fc7ee;

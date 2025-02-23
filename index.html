@@ -196,28 +196,23 @@
     </section>
     
 
-<section id="Audio_1"/>
-
-
-<div class="audio-container">
-    <div class="audio-item">
-        <br>
-        <audio controls>
-            <source src="audio/Original.wav" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <figcaption><b>Original audio sample from the Harvard Sentences dataset</b></figcaption>
+<section id="Audio_1">
+    <div class="audio-container">
+        <div class="audio-item">
+            <audio controls>
+                <source src="audio/Original.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <figcaption><b>Original audio sample from the Harvard Sentences dataset</b></figcaption>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="audio/Feasibility.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <figcaption><b>Audio signal reconstructed from EM Radiation using probe antenna</b></figcaption>
+        </div>
     </div>
-    <br>
-    <div class="audio-item">
-        <br>
-        <audio controls>
-            <source src="audio/Feasibility.wav" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <figcaption><b>Audio signal reconstructed from EM Radiation using probe antenna</b></figcaption>
-    </div>
-</div>
 </section>
 
 
@@ -228,7 +223,7 @@
     <!-- Description Block -->
     <div class="content-block">
         <p>
-            We study the attacker’s capability to remotely discern the leaked signal from the noise by measuring the signal-to-noise ratio under different conditions, i.e., (i) volume, (ii) antennas, (iii) orientations, and (iv) distance.
+            We study the attacker's capability to remotely discern the leaked signal from the noise by measuring the signal-to-noise ratio under different conditions, i.e., (i) volume, (ii) antennas, (iii) orientations, and (iv) distance.
         </p>
         <p>
             <b>Impact of antenna distance and orientation:</b> We place our laptop in an office space and measure the SNR using a probe antenna (A<sub>Probe</sub>), a loop antenna (A<sub>Loop</sub>) in three orientations (vertical, horizontal, and perpendicular), and a Yagi antenna (A<sub>Yagi</sub>) in two orientations (horizontal, vertical). We achieve 25 dB PSNR at the device's proximity and 11.59 dB PSNR at 25 cm. The Yagi antenna performs better beyond 25 cm.
@@ -269,7 +264,7 @@
 
     <!-- Behind-the-Wall Scenario -->
     <div class="content-block">
-        <p><b>Behind-the-wall scenario:</b> We assess the accuracy of executing the attack in two adjacent rooms separated by a plaster wall (≈15 cm thick). The victim’s laptop is placed on one side, and the attacker places the A<sub>Loop</sub> antenna on the other side. We evaluate distances of 15, 20, and 25 cm.</p>
+        <p><b>Behind-the-wall scenario:</b> We assess the accuracy of executing the attack in two adjacent rooms separated by a plaster wall (≈15 cm thick). The victim's laptop is placed on one side, and the attacker places the A<sub>Loop</sub> antenna on the other side. We evaluate distances of 15, 20, and 25 cm.</p>
         <p>The speaker classification accuracy reaches 99% at 20 cm and drops to 97.3% at 25 cm, confirming the high intelligibility of the recorded leakage. We achieve a word error rate of 6.5%.</p>
     </div>
 
@@ -410,7 +405,7 @@
 
         <p><b>Clock Randomization:</b> Spread-Spectrum Clocking (SSC) is a viable hardware defense against SoI. SSC randomly jitters clock signals, making narrow-band EM side-channels difficult to exploit. Designers can implement SSC by replacing standard oscillators with commercial SSC clock generators.
 
-        We examine clock frequency deviations of 0.0%, 0.1%, 0.3%, and 1.0%, which are lower than commercial SSC generators (e.g., ADI’s DS1087L at 2-4%). The EM side-channel's sound quality significantly deteriorates as deviation increases, reducing STOI from 0.7254 to 0.0490 at 1.0% deviation. Meanwhile, the original microphone's performance remains stable (≈0.98 STOI), confirming SSC's effectiveness in mitigating the attack.</p>
+        We examine clock frequency deviations of 0.0%, 0.1%, 0.3%, and 1.0%, which are lower than commercial SSC generators (e.g., ADI's DS1087L at 2-4%). The EM side-channel's sound quality significantly deteriorates as deviation increases, reducing STOI from 0.7254 to 0.0490 at 1.0% deviation. Meanwhile, the original microphone's performance remains stable (≈0.98 STOI), confirming SSC's effectiveness in mitigating the attack.</p>
     </div>
 </section>
 
