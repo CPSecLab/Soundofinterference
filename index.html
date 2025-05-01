@@ -92,8 +92,7 @@
     
     <div class="boxed">
         <div class="flex-row">
-            <p> We introduce a novel electromagnetic (EM) side-channel attack that allows for acoustic eavesdropping on electronic devices. This method specifically targets modern digital microelectromechanical systems (MEMS) microphones, which transmit captured audio via pulse-density modulation (PDM), that translate the analog sound signal into the density of output pulses in the digital domain. We discover that each harmonic of these digital pulses retains acoustic information, allowing the original audio to be retrieved through simple FM demodulation using standard radio receivers.
-                An attacker can exploit this phenomenon to capture what the victim microphone hears remotely without installing malicious software or tampering with the device.  
+            <p> We present a novel electromagnetic (EM) side-channel attack that enables acoustic eavesdropping on devices using modern MEMS microphones. These microphones transmit audio via pulse-density modulation (PDM), where each harmonic of the digital pulses retains acoustic data. Using simple FM demodulation with standard radio receivers, an attacker can remotely recover the audio heard by the microphone—without any software compromise or physical access.
             </p>
     
             <div class="image-container">
@@ -101,7 +100,7 @@
             </div>
             <br>
     
-            <p> We verify the vulnerability presence by conducting real-world evaluation on several PDM microphones and electronic devices, including laptops and smart speakers. For example, we demonstrate that the attack achieves up to 94.2% accuracy in recognizing spoken digits, up to 2 meters from a victim laptop located behind a 25 cm concrete wall. We also evaluate the attacker capability to eavesdrop on speech using popular speech-to-text APIs (e.g., OpenAI) not trained on EM traces, achieving a maximum of 14% transcription error rate in recovering the Harvard Sentences dataset. We further demonstrate that similar accuracy can be achieved with a cheap and stealthy antenna made out of copper tape. We finally discuss the limited effectiveness of current defenses such as resampling, and we propose a new hardware defense based on clock randomization.
+            <p> We validate the attack through real-world tests on various PDM microphones and devices, including laptops and smart speakers. The attack achieves up to 94.2% digit recognition accuracy from 2 meters away, even through a 25 cm concrete wall. Using speech-to-text APIs not trained on EM signals, we recover speech with as little as 14% error on the Harvard Sentences dataset. Comparable results are obtained using a low-cost copper tape antenna. We also show that existing defenses like resampling are ineffective and propose a new hardware mitigation based on clock randomization.
             </p>
         </div>
     
